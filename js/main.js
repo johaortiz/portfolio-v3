@@ -13,7 +13,6 @@ import {
  import { OrbitControls } from "three/addons/controls/OrbitControls";
  import TWEEN from "three/addons/libs/tween.module.js";
 
-console.clear();
 // ------------------------ //
 // SETUP
 

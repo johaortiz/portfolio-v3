@@ -1,41 +1,48 @@
 <nav class="z-50 h-10 flex items-center justify-between flex-shrink-0 m-4">
-  <div
-    id="logo"
-    class="font-bold text-center hover:text-[#9447FF] duration-[600ms] ease-[cubic-bezier(0.55, -0.03, 0.75, 1.01)] ml-4"
+  <a
+    href="#home"
+    class="logo font-bold text-center hover:text-[#9447FF] duration-[600ms] ease-[cubic-bezier(0.55, -0.03, 0.75, 1.01)] ml-4"
   >
     {`<apsTris.dev/>`}
-  </div>
-  <ul class="flex justify-center [&>li]:px-4 [&>li]:py-2 [&>li]:ml-2">
-    <li
-      class="hover:bg-[#9447FF] rounded duration-[600ms] ease-[cubic-bezier(0.55, -0.03, 0.75, 1.01)]"
-    >
+  </a>
+  <ul class="flex justify-center">
+    <li class="nav-item">
       <a class="nav-text" href="#habilities">Habilidades</a>
     </li>
-    <li
-      class="hover:bg-[#9447FF] rounded duration-[600ms] ease-[cubic-bezier(0.55, -0.03, 0.75, 1.01)]"
-    >
+    <li class="nav-item">
       <a class="nav-text" href="#projects">Proyectos</a>
     </li>
-    <li
-      class="hover:bg-[#9447FF] rounded duration-[600ms] ease-[cubic-bezier(0.55, -0.03, 0.75, 1.01)]"
-    >
+    <li class="nav-item">
       <a class="nav-text" href="#contact">Contacto</a>
     </li>
   </ul>
 </nav>
 
 <style>
-    .nav-text {
-      text-align: center;
-      font-size: 1rem;
-      font-style: normal;
-      line-height: normal;
-      font-weight: 600;
-      width: auto;
-    }
-    #logo {
-      font-size: 1.5rem;
-      font-style: normal;
-      line-height: normal;
-    }
-  </style>
+  .logo {
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .nav-item {
+    border-radius: 0.25rem;
+    transition-duration: 600ms;
+    transition-timing-function: [cubic-bezier(0.55, -0.03, 0.75, 1.01)];
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .nav-item:hover {
+    background: #9447ff;
+  }
+
+  .nav-text {
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+    width: auto;
+  }
+</style>

@@ -1,6 +1,5 @@
 ---
 import downArrow from "../../public/svg/arrow.svg";
-
 ---
 
 <section class="h-screen flex items-center justify-center">
@@ -10,8 +9,8 @@ import downArrow from "../../public/svg/arrow.svg";
     <h1>A MI MUNDO</h1>
     <h1>CREATIVO</h1>
   </div>
-  <a href="#about" class="z-10 absolute bottom-0 mb-4">
-    <img src="" alt="">
+  <a href="#about" class="z-10 absolute bottom-0 mb-4 down-arrow animate-pulse hover:animate-none">
+    <img src={downArrow.src} alt="Down Arrow" />
   </a>
 </section>
 
@@ -22,4 +21,5 @@ import downArrow from "../../public/svg/arrow.svg";
     font-weight: 700;
     line-height: normal;
   }
+  
 </style>
