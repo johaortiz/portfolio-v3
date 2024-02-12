@@ -16,15 +16,18 @@ import {
 // ------------------------ //
 // SETUP
 
+let pageWidth  = document.documentElement.scrollWidth;
+
 const count = 128 ** 2;
 
 const scene = new Scene();
 
-const camera = new PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 100);
+const camera = new PerspectiveCamera(50, pageWidth / innerHeight, 0.1, 100);
 camera.position.set(0, 2, 3);
 
+
 const renderer = new WebGLRenderer({ canvas });
-renderer.setSize(innerWidth, innerHeight);
+renderer.setSize(pageWidth, innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 const orbit = new OrbitControls(camera, canvas);
@@ -365,9 +368,10 @@ renderer.setAnimationLoop(() => {
 // HELPERS
 
 addEventListener("resize", () => {
-  camera.aspect = innerWidth / innerHeight;
+  pageWidth  = document.documentElement.scrollWidth;
+  camera.aspect = pageWidth / innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(innerWidth, innerHeight);
+  renderer.setSize(pageWidth, innerHeight);
 });
 
 const shaderUtils = `

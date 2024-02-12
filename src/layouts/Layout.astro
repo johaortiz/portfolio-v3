@@ -18,18 +18,20 @@ import Navbar from "../components/Navbar.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <header class="absolute w-screen z-30">
+  <body class="h-full w-full">
+    <header class="fixed w-full z-30">
       <Navbar />
     </header>
     <slot />
     <script type="module" src="../../js/main.js"></script>
-    <canvas class="block absolute top-0 left-0 z-0" id="canvas"></canvas>
+    <canvas class="absolute top-0 left-0 z-0" id="canvas" />
   </body>
 
   <style is:global>
     html,
     body {
+      margin: 0px;
+      padding: 0px;
       font-family: "Quicksand Variable", sans-serif;
       background: transparent;
       color: #ffffff;
